@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/readmeio/ua-platformer/issues"
   },
+  "keywords": [
+    "user agent"
+  ],
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .js,.ts",
