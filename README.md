@@ -26,7 +26,7 @@ console.log(uaPlatformer(useragent)); // PowerShell
 | GuzzleHttp/6.5.5 curl/7.29.0 PHP/8.1.12 | `PHP` |
 | Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5304.110 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html) | `Google` |
 | Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22000.832 | `PowerShell` |
-| Faraday v1.10.0` | `Ruby`|
-| rdme-github/8.1.1` | `ReadMe` |
+| Faraday v1.10.0 | `Ruby`|
+| rdme-github/8.1.1 | `ReadMe` |
 | Typhoeus - https://github.com/typhoeus/typhoeus | `Ruby` |
 | WordPress/6.0.3; https://example.com | `PHP` |
