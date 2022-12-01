@@ -45,9 +45,11 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: 'npm'
 
+      # Node 14 still ships with an old version of NPM that doesn't play that great with the newer
+      # releases.
       - name: Install npm@latest
         if: matrix.node == '14'
-        run: npm install -g npm@latest
+        run: npm install -g npm@7
 
       - run: npm ci
       - run: npm run build

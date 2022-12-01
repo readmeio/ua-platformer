@@ -63,7 +63,7 @@ export function getPlatformName(platform: string): string {
  * platform is unable to be determined, `false` is returned.
  *
  */
-export function getUserAgentPlatform(useragent: string): false | string {
+export default function uaPlatformer(useragent: string): false | string {
   if (!useragent) {
     return false;
   }

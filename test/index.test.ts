@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { getPlatformName, getUserAgentPlatform } from '../src';
+import uaPlatformer, { getPlatformName } from '../src';
 
 describe('ua-platformer', function () {
   describe('#getPlatformName', function () {
@@ -13,7 +13,7 @@ describe('ua-platformer', function () {
     });
   });
 
-  describe('#getUserAgentPlatform', function () {
+  describe('main', function () {
     describe('should detect services from amazon, google, and microsoft', function () {
       Object.entries({
         Amazon: ['Amazon CloudFront', 'fulfillment-gateway'],
@@ -29,7 +29,7 @@ describe('ua-platformer', function () {
       }).forEach(([platform, useragents]) => {
         useragents.forEach(useragent => {
           it(useragent, function () {
-            expect(getUserAgentPlatform(useragent)).to.equal(platform);
+            expect(uaPlatformer(useragent)).to.equal(platform);
           });
         });
       });
@@ -110,7 +110,7 @@ describe('ua-platformer', function () {
       }).forEach(([platform, useragents]) => {
         useragents.forEach(useragent => {
           it(useragent, function () {
-            expect(getUserAgentPlatform(useragent)).to.equal(platform);
+            expect(uaPlatformer(useragent)).to.equal(platform);
           });
         });
       });
@@ -136,7 +136,7 @@ describe('ua-platformer', function () {
       }).forEach(([platform, useragents]) => {
         useragents.forEach(useragent => {
           it(useragent, function () {
-            expect(getUserAgentPlatform(useragent)).to.equal(platform);
+            expect(uaPlatformer(useragent)).to.equal(platform);
           });
         });
       });
@@ -144,12 +144,10 @@ describe('ua-platformer', function () {
 
     describe('unknown user agents', function () {
       it('should not recognize an empty user agent', function () {
-        expect(getUserAgentPlatform('')).to.be.false;
-        expect(getUserAgentPlatform('   ')).to.be.false;
-
-        // @ts-expect-error Intentionally testing mistypings.
-        expect(getUserAgentPlatform(false)).to.be.false;
-        expect(getUserAgentPlatform(undefined)).to.be.false;
+        expect(uaPlatformer('')).to.be.false;
+        expect(uaPlatformer('   ')).to.be.false;
+        expect(uaPlatformer(false as unknown as string)).to.be.false;
+        expect(uaPlatformer(undefined)).to.be.false;
       });
 
       describe('should not retrieve a platform', function () {
@@ -197,7 +195,7 @@ describe('ua-platformer', function () {
           'x99/meliflex',
         ].forEach(useragent => {
           it(useragent, function () {
-            expect(getUserAgentPlatform(useragent)).to.be.false;
+            expect(uaPlatformer(useragent)).to.be.false;
           });
         });
       });
