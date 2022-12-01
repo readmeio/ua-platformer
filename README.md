@@ -6,12 +6,15 @@
 
 ## Install
 
-`$ npm install --save @readme/ua-platformer`
+```
+npm install --save @readme/ua-platformer
+```
 
 ## Usage
 
 ```javascript
-const uaPlatformer = require('@readme/ua-platformer')
+import uaPlatformer from '@readme/ua-platformer';
+// const { default: uaPlatformer } = require('@readme/ua-platformer');
 
 const useragent = 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22000.832'
 
