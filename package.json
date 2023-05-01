@@ -33,17 +33,17 @@
   },
   "devDependencies": {
     "@readme/eslint-config": "^10.5.2",
-    "@types/chai": "^4.3.4",
+    "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.3",
     "@types/ua-parser-js": "^0.7.36",
     "chai": "^4.3.7",
-    "eslint": "^8.37.0",
+    "eslint": "^8.39.0",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "prettier": "@readme/eslint-config/prettier"
 }
