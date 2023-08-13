@@ -26,24 +26,20 @@
     "prepack": "npm run build",
     "pretest": "npm run lint",
     "prettier": "prettier --list-different --write \"./**/**.{js,ts}\"",
-    "test": "nyc mocha \"test/**/*.test.ts\""
+    "test": "vitest --coverage"
   },
   "dependencies": {
     "ua-parser-js": "^1.0.35"
   },
   "devDependencies": {
-    "@readme/eslint-config": "^10.5.3",
-    "@types/chai": "^4.3.5",
-    "@types/mocha": "^10.0.1",
+    "@readme/eslint-config": "^12.0.2",
     "@types/node": "^20.2.5",
     "@types/ua-parser-js": "^0.7.36",
-    "chai": "^4.3.7",
+    "@vitest/coverage-v8": "^0.34.1",
     "eslint": "^8.41.0",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.8.8",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "prettier": "^3.0.1",
+    "typescript": "^5.0.4",
+    "vitest": "^0.34.1"
   },
   "prettier": "@readme/eslint-config/prettier"
 }
