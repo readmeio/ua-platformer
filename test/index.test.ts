@@ -150,6 +150,7 @@ describe('ua-platformer', () => {
         expect(uaPlatformer('')).toBe(false);
         expect(uaPlatformer('   ')).toBe(false);
         expect(uaPlatformer(false as unknown as string)).toBe(false);
+        // @ts-expect-error deliberately sending bad data
         expect(uaPlatformer(undefined)).toBe(false);
       });
 
