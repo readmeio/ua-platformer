@@ -18,7 +18,7 @@ import uaPlatformer from '@readme/ua-platformer';
 
 const useragent = 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22000.832'
 
-console.log(uaPlatformer(useragent)); // PowerShell
+console.log(uaPlatformer(useragent)); // { name: 'PowerShell', browser: false }
 ```
 
 ## Examples
