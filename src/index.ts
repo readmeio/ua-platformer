@@ -84,7 +84,7 @@ export default function uaPlatformer(useragent: string): false | string {
   // Does this user agent contain platform or client that we know about?
   const rgx = new RegExp(`(^|[(| ])(?<agent>${Object.keys(PLATFORMS).join('|')})([/| ]?v?[\\d.]+)?`, 'i');
   const platform = useragent.match(rgx);
-  if (platform) {
+  if (platform?.groups) {
     return getPlatformName(platform.groups.agent);
   }
 
