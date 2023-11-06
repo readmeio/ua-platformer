@@ -5,7 +5,7 @@ const PLATFORMS = {
   alamofire: 'Swift', // https://github.com/Alamofire/Alamofire
   axios: 'Node',
   csharp: 'C#',
-  curl: 'Shell',
+  curl: 'cURL',
   dart: 'Dart',
   faraday: 'Ruby', // https://github.com/lostisland/faraday
   insomnia: 'Insomnia', // https://insomnia.rest/

@@ -41,6 +41,7 @@ describe('ua-platformer', () => {
           C: ['UnityPlayer/2021.3.1f1 (UnityWebRequest/1.0, libcurl/7.80.0-DEV)'],
           'C++': ['Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)'],
           'C#': ['RestSharp/108.0.3.0'],
+          cURL: ['curl/7.85.0'],
           Dart: ['Dart/2.18 (dart:io)'],
           Erlang: ['hackney/1.18.1'],
           Go: [
@@ -107,7 +108,6 @@ describe('ua-platformer', () => {
             'Typhoeus - https://github.com/typhoeus/typhoeus',
             'rest-client/2.0.2 (linux-musl x86_64) ruby/2.7.4p191',
           ],
-          Shell: ['curl/7.85.0'],
           Swift: ['Impact-dev/0.1 (com.pitcher.Impact.dev; build:102; iOS 16.1.0) Alamofire/5.4.3'],
         }),
       )('%s', (platform, useragents) => {
