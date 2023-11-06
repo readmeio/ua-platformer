@@ -1,6 +1,6 @@
 {
   "name": "@readme/ua-platformer",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Library to determine the platform of a given User Agent header.",
   "license": "MIT",
   "author": "ReadMe <support@readme.io> (https://readme.com)",
@@ -19,6 +19,7 @@
   "keywords": [
     "user agent"
   ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .js,.ts",
