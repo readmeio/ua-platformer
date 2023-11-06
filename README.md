@@ -16,13 +16,14 @@ npm install --save @readme/ua-platformer
 import uaPlatformer from '@readme/ua-platformer';
 // const { default: uaPlatformer } = require('@readme/ua-platformer');
 
-const useragent = 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22000.832'
+const useragent = 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.22000.832';
 
 console.log(uaPlatformer(useragent)); // { name: 'PowerShell', browser: false }
 ```
 
 ## Examples
 
+<!-- prettier-ignore-start -->
 | User Agent | Platform |
 | :--- | :--- |
 | Amazon Cloudfront | `Amazon` |
@@ -33,3 +34,4 @@ console.log(uaPlatformer(useragent)); // { name: 'PowerShell', browser: false }
 | rdme-github/8.1.1 | `ReadMe` |
 | Typhoeus - https://github.com/typhoeus/typhoeus | `Ruby` |
 | WordPress/6.0.3; https://example.com | `PHP` |
+<!-- prettier-ignore-end -->
