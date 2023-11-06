@@ -5,7 +5,7 @@ const PLATFORMS = {
   alamofire: 'Swift', // https://github.com/Alamofire/Alamofire
   axios: 'Node',
   csharp: 'C#',
-  curl: 'Shell',
+  curl: 'cURL',
   dart: 'Dart',
   faraday: 'Ruby', // https://github.com/lostisland/faraday
   insomnia: 'Insomnia', // https://insomnia.rest/
@@ -93,7 +93,7 @@ export default function uaPlatformer(useragent: string): false | { browser: bool
   // Does this user agent contain platform or client that we know about?
   const rgx = new RegExp(`(^|[(| ])(?<agent>${Object.keys(PLATFORMS).join('|')})([/| ]?v?[\\d.]+)?`, 'i');
   const platform = useragent.match(rgx);
-  if (platform) {
+  if (platform?.groups) {
     return {
       name: getPlatformName(platform.groups.agent),
       browser: false,
