@@ -28,7 +28,6 @@
     "lint:ts": "eslint . --ignore-path .gitignore --ext js,ts",
     "prebuild": "rm -rf dist/",
     "prepack": "npm run build",
-    "pretest": "npm run lint",
     "prettier": "prettier --check .",
     "prettier:write": "prettier --check --write .",
     "test": "vitest run --coverage"
