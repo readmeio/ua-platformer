@@ -14,6 +14,7 @@ const PLATFORMS = {
   jersey: 'Java', // https://eclipse-ee4j.github.io/jersey/
   jetty: 'Java', // https://www.eclipse.org/jetty/
   hackney: 'Erlang', // https://hexdocs.pm/hackney/
+  httpie: 'HTTPie', // https://httpie.io/cli
   'go-http-client': 'Go', // https://pkg.go.dev/net/http
   'go-resty': 'Go', // https://github.com/go-resty/resty
   'google-apps-script': 'Google',

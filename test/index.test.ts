@@ -43,6 +43,14 @@ describe('ua-platformer', () => {
           'C#': ['RestSharp/108.0.3.0'],
           Dart: ['Dart/2.18 (dart:io)'],
           Erlang: ['hackney/1.18.1'],
+          Go: [
+            'Go-http-client/2.0',
+            'OT-HTTP-WC-Client',
+            'go-resty/2.7.0 (https://github.com/go-resty/resty)',
+            'readme-api-go-client',
+          ],
+          HTTPie: ['httpie', 'HTTPie/3.2.2', 'HTTPie/1.0.3'],
+          Insomnia: ['insomnia/2022.6.0'],
           Java: [
             'Apache-HttpAsyncClient/4.1.3 (Java/17.0.4.1)',
             'Apache-HttpClient/4.5 (Java/11.0.14.1)',
@@ -56,13 +64,6 @@ describe('ua-platformer', () => {
             'groovy-2.4.4',
             'okhttp/4.9.0',
           ],
-          Go: [
-            'Go-http-client/2.0',
-            'OT-HTTP-WC-Client',
-            'go-resty/2.7.0 (https://github.com/go-resty/resty)',
-            'readme-api-go-client',
-          ],
-          Insomnia: ['insomnia/2022.6.0'],
           Node: [
             '@diagonal-finance/sdk@2.0.3 (node 16.16.0; linux 4.14.255-276-224.499.amzn2.x86_64)',
             'Needle/2.1.2 (Node.js v10.24.1; linux x64)',
