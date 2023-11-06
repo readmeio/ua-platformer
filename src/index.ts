@@ -64,7 +64,7 @@ export function getPlatformName(platform: string): string {
  * platform is unable to be determined, `false` is returned.
  *
  */
-export default function uaPlatformer(useragent: string): false | string {
+export default function uaPlatformer(useragent: string): false | { browser: boolean; name: string } {
   if (!useragent) {
     return false;
   }
@@ -74,31 +74,49 @@ export default function uaPlatformer(useragent: string): false | string {
   // Is this user agent from some service at Amazon, Google, or Microsoft (like Amazon Cloudfront,
   // Google Cloud Tasks, or Azure Logic Apps).
   if (ualower.startsWith('amazon') || ualower === 'fulfillment-gateway') {
-    return 'Amazon';
+    return {
+      name: 'Amazon',
+      browser: false,
+    };
   } else if (ualower.startsWith('google')) {
-    return 'Google';
+    return {
+      name: 'Google',
+      browser: false,
+    };
   } else if (ualower.startsWith('azure')) {
-    return 'Azure';
+    return {
+      name: 'Azure',
+      browser: false,
+    };
   }
 
   // Does this user agent contain platform or client that we know about?
   const rgx = new RegExp(`(^|[(| ])(?<agent>${Object.keys(PLATFORMS).join('|')})([/| ]?v?[\\d.]+)?`, 'i');
   const platform = useragent.match(rgx);
   if (platform) {
-    return getPlatformName(platform.groups.agent);
+    return {
+      name: getPlatformName(platform.groups.agent),
+      browser: false,
+    };
   }
 
   // Is this a browser?
   const parser = new UAParser(useragent).getResult();
   if (parser.browser.name) {
+    let browserName: string;
     // We don't need to differentiate here between `Chrome`, `Chromium` or `Chrome WebView`.
     if (parser.browser.name.startsWith('Chrome')) {
-      return 'Chrome';
+      browserName = 'Chrome';
     } else if (parser.browser.name === 'Mobile Safari') {
-      return 'Safari';
+      browserName = 'Safari';
+    } else {
+      browserName = parser.browser.name;
     }
 
-    return parser.browser.name;
+    return {
+      name: browserName,
+      browser: true,
+    };
   }
 
   return false;

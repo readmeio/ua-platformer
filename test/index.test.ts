@@ -30,7 +30,10 @@ describe('ua-platformer', () => {
         }),
       )('%s', (platform, useragents) => {
         it.each(useragents)('%s', useragent => {
-          expect(uaPlatformer(useragent)).to.equal(platform);
+          expect(uaPlatformer(useragent)).toStrictEqual({
+            name: platform,
+            browser: false,
+          });
         });
       });
     });
@@ -112,7 +115,10 @@ describe('ua-platformer', () => {
         }),
       )('%s', (platform, useragents) => {
         it.each(useragents)('%s', useragent => {
-          expect(uaPlatformer(useragent)).to.equal(platform);
+          expect(uaPlatformer(useragent)).toStrictEqual({
+            name: platform,
+            browser: false,
+          });
         });
       });
     });
@@ -140,7 +146,10 @@ describe('ua-platformer', () => {
         }),
       )('%s', (platform, useragents) => {
         it.each(useragents)('%s', useragent => {
-          expect(uaPlatformer(useragent)).to.equal(platform);
+          expect(uaPlatformer(useragent)).toStrictEqual({
+            name: platform,
+            browser: true,
+          });
         });
       });
     });
