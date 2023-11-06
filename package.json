@@ -1,6 +1,6 @@
 {
   "name": "@readme/ua-platformer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library to determine the platform of a given User Agent header.",
   "license": "MIT",
   "author": "ReadMe <support@readme.io> (https://readme.com)",
