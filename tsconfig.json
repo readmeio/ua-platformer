@@ -7,7 +7,7 @@
     "lib": ["es2020"],
     "noImplicitAny": true,
     "outDir": "dist/",
-    "strict": true,
+    "strict": true
   },
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*"]
 }
