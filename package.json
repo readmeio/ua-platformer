@@ -33,7 +33,7 @@
     "test": "vitest run --coverage"
   },
   "dependencies": {
-    "ua-parser-js": "^1.0.37"
+    "ua-parser-js": "^2.0.0"
   },
   "devDependencies": {
     "@readme/eslint-config": "^14.0.0",
