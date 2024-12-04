@@ -1,4 +1,4 @@
-import UAParser from 'ua-parser-js';
+import { UAParser } from 'ua-parser-js';
 
 const PLATFORMS = {
   aiohttp: 'Python', // https://docs.aiohttp.org/en/stable/

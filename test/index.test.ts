@@ -126,7 +126,7 @@ describe('ua-platformer', () => {
     describe('should detect browser platforms', () => {
       describe.each(
         Object.entries({
-          Chrome: [
+          'Mobile Chrome': [
             'Mozilla/5.0 (Linux; Android 10; M2006C3LG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
           ],
           Edge: [
