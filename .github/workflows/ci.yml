@@ -30,8 +30,9 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node:
-          - 18
-          - 20
+          - lts/-1
+          - lts/*
+          - latest
 
     steps:
       - name: Checkout source
