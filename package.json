@@ -36,7 +36,7 @@
     "ua-parser-js": "^2.0.1"
   },
   "devDependencies": {
-    "@readme/eslint-config": "^14.0.0",
+    "@readme/eslint-config": "^14.4.2",
     "@types/node": "^22.13.1",
     "@types/ua-parser-js": "^0.7.38",
     "@vitest/coverage-v8": "^3.0.5",
