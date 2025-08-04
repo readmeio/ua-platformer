@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
-import uaPlatformer, { getPlatformName } from '../src';
+import uaPlatformer, { getPlatformName } from '../src/index.ts';
 
 describe('ua-platformer', () => {
   describe('#getPlatformName', () => {
