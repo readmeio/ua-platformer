@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "repository": {
     "type": "git",
@@ -37,14 +37,14 @@
     "ua-parser-js": "^2.0.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.1.3",
-    "@readme/standards": "^2.2.0",
+    "@biomejs/biome": "^2.4.10",
+    "@readme/standards": "^2.4.0",
     "@types/node": "^25.0.3",
     "@types/ua-parser-js": "^0.7.38",
-    "@vitest/coverage-v8": "^4.0.9",
+    "@vitest/coverage-v8": "^4.1.2",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2",
-    "vitest": "^4.0.9"
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
   },
   "prettier": "@readme/standards/prettier"
 }
