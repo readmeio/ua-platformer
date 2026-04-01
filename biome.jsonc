@@ -11,5 +11,10 @@
       "project": "all",
       "test": "all",
     },
+    "rules": {
+      "correctness": {
+        "useImportExtensions": "off",
+      },
+    },
   },
 }
