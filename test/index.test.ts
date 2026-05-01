@@ -5,11 +5,11 @@ import uaPlatformer, { getPlatformName } from '../src/index.js';
 describe('ua-platformer', () => {
   describe('#getPlatformName', () => {
     it('should return the proper name of a given platform', () => {
-      expect(getPlatformName('alamofire')).to.equal('Swift');
+      expect(getPlatformName('alamofire')).toBe('Swift');
     });
 
     it('should capitalize the name of an unknown platform', () => {
-      expect(getPlatformName('buster')).to.equal('Buster');
+      expect(getPlatformName('buster')).toBe('Buster');
     });
   });
 
@@ -160,7 +160,7 @@ describe('ua-platformer', () => {
         expect(uaPlatformer('   ')).toBe(false);
         expect(uaPlatformer(false as unknown as string)).toBe(false);
         // @ts-expect-error deliberately sending bad data
-        expect(uaPlatformer(undefined)).toBe(false);
+        expect(uaPlatformer()).toBe(false);
       });
 
       describe('should not retrieve a platform', () => {
